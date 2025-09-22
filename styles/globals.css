@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0d0f;
+  --fg: #f2f5f9;
+  --muted: #93a1b1;
+  --accent: #6ee7ff;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[color:var(--bg)] text-[color:var(--fg)] antialiased;
+  font-feature-settings: "ss01" on, "cv01" on;
+  font-family: "Inter", "Space Grotesk", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  @apply border-transparent outline-offset-2 outline-[color:var(--accent)];
+}
+
+[data-section] {
+  scroll-margin-top: 88px;
+}
+
+a {
+  @apply text-[color:var(--fg)];
+}
+
+button:focus-visible,
+summary:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  @apply outline outline-2 outline-[color:var(--accent)] outline-offset-2;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[color:rgba(255,255,255,0.05)];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[color:rgba(110,231,255,0.5)] rounded-full;
+}
+
+@layer utilities {
+  .bg-surface {
+    background: color-mix(in srgb, var(--bg) 92%, white 8%);
+  }
+
+  .text-muted {
+    color: color-mix(in srgb, var(--fg) 70%, black 30%);
+  }
+
+  .border-muted {
+    border-color: color-mix(in srgb, var(--fg) 8%, transparent 92%);
+  }
+}
