@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LetsAI Studio Marketing Site
 
-## Getting Started
+Modern marketing site for the LetsAI Studio agentic AI product team. Built with Next.js 15 App Router, React 19.1, Tailwind CSS v4, and Turbopack.
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000 to explore the single-page experience with smooth-scroll navigation and live demo widgets.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+  layout.tsx          # Global metadata + fonts + analytics
+  page.tsx            # Single-page layout wiring all sections
+  api/
+    contact/route.ts  # Contact form handler (Edge runtime)
+    demos/
+      chat/route.ts     # Vercel AI SDK streaming chat stub
+      langgraph/route.ts # LangGraph proxy + mock stream
+      agents/route.ts    # OpenAI Agents SDK sample response
+components/
+  nav/                 # Sticky navigation + mobile drawer
+  sections/            # Hero, Tech, Demos, Pricing, Contact, etc.
+  ui/                  # Buttons, cards, inputs, animation helpers
+lib/
+  ai/                  # Chat, agent, and LangGraph helpers
+  analytics.tsx        # Pluggable analytics stub
+styles/
+  globals.css          # Tailwind v4 + global tokens
+```
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+Copy `.env.example` to `.env.local` and populate when integrating real providers.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+OPENAI_API_KEY=
+LANGGRAPH_SERVER_URL=
+NEXT_PUBLIC_ANALYTICS_ID=
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `OPENAI_API_KEY`: Optional. Enables live OpenAI Agents SDK + chat completions.
+- `LANGGRAPH_SERVER_URL`: Optional LangGraph Platform/Server URL for streaming graph runs.
+- `NEXT_PUBLIC_ANALYTICS_ID`: Optional analytics site ID used by the lightweight script in `lib/analytics.tsx`.
 
-## Deploy on Vercel
+With no keys configured the API routes respond with safe mock data.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Wiring real providers
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Update `lib/ai/vercel-ai.ts` to select your preferred provider (OpenAI, Bedrock, vLLM) and model ID.
+- Point `LANGGRAPH_SERVER_URL` at a LangGraph runtime that exposes `/api/graph/invoke`.
+- Replace the stub tool outputs in `lib/ai/openai-agents.ts` with actual Agents SDK tool definitions.
+- Extend `app/api/contact/route.ts` to push leads into CRM, email, or Slack.
+
+## Scripts
+
+```bash
+pnpm dev    # Start Turbopack dev server
+pnpm build  # Production build
+pnpm start  # Run the production build locally
+pnpm lint   # Lint with eslint (optional)
+```
+
+## Accessibility & performance
+
+- Sticky navigation uses hash-based smooth scrolling with `scroll-margin-top` offsets.
+- All interactive elements provide focus styles and keyboard-friendly behaviour.
+- Sections leverage `motion` for subtle entrance animations without blocking rendering.
