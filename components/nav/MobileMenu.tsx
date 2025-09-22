@@ -43,7 +43,7 @@ export function MobileMenu({ items, open, onClose }: MobileMenuProps) {
     >
       <div className="flex items-center justify-between">
         <span className="text-sm font-semibold uppercase tracking-[0.4em] text-[color:var(--accent)]">
-          LetsAI Studio
+          Let’s Sprinkle AI
         </span>
         <Button
           ref={closeRef}
@@ -68,7 +68,7 @@ export function MobileMenu({ items, open, onClose }: MobileMenuProps) {
         ))}
       </nav>
       <p className="mt-6 text-sm text-muted">
-        SOC 2 ready · Region-specific deployments · No training on your data.
+        Human-centered AI copilots · Enterprise guardrails · On-call support from Kolkata.
       </p>
     </div>
   );

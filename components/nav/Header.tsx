@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -41,8 +42,20 @@ export function Header() {
       }`}
     >
       <Container className="flex h-20 items-center justify-between">
-        <Link href="#home" className="text-sm font-semibold uppercase tracking-[0.4em] text-[color:var(--accent)]">
-          LetsAI Studio
+        <Link
+          href="#home"
+          className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.4em] text-[color:var(--accent)]"
+          aria-label="Let's Sprinkle AI home"
+        >
+          <Image
+            src="/assets/brand/lets-sprinkle-ai-logo.svg"
+            alt="Let's Sprinkle AI logo"
+            width={120}
+            height={60}
+            className="h-10 w-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.35)]"
+            priority
+          />
+          <span className="sr-only">Let’s Sprinkle AI</span>
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           {items.map((item) => (

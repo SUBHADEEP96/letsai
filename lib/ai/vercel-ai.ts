@@ -9,10 +9,10 @@ const encoder = new TextEncoder();
 
 function createChunks(prompt: string) {
   return [
-    "Thanks for exploring the LetsAI chat sandbox. ",
-    "In production we route through the Vercel AI SDK's `streamText` helper or plug in OpenAI / Bedrock models. ",
+    "Thanks for exploring the Let’s Sprinkle AI sandbox. ",
+    "In production we weave in the Vercel AI SDK’s `streamText` helper alongside OpenAI, Bedrock, or custom models. ",
     "Because no provider key is configured we are streaming from a mock orchestrator instead. ",
-    `You asked: "${prompt}" — we'd orchestrate retrieval, evaluation, and guardrails before returning the final answer.`,
+    `You asked: "${prompt}" — we’d orchestrate retrieval, evaluation, and guardrails before returning the final answer.`,
   ];
 }
 
