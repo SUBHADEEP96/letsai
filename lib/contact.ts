@@ -19,6 +19,6 @@ export async function handleContactSubmission(payload: ContactPayload): Promise<
 
   return {
     success: true,
-    message: "Thanks! A specialist will be in touch within one business day.",
+    message: "Thanks! A Let’s Sprinkle AI specialist will be in touch within one business day.",
   };
 }

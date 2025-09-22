@@ -19,19 +19,26 @@ export function Hero() {
     <Section id="home" className="overflow-hidden pb-20 pt-28 sm:pt-32">
       <Container className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <FadeIn className="space-y-8">
-          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--accent)]">
-            Agentic product studio
-          </p>
+          <Image
+            src="/assets/brand/lets-sprinkle-ai-logo.svg"
+            alt="Let's Sprinkle AI logo"
+            width={200}
+            height={120}
+            className="h-16 w-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.25)] sm:h-20"
+            priority
+          />
+          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--accent)]">Customer experience AI studio</p>
           <h1 className="text-balance text-4xl font-semibold leading-tight sm:text-6xl">
-            Agentic AI, built for production.
+            Sprinkle intelligence across every interaction.
           </h1>
           <p className="max-w-xl text-lg text-muted">
-            We design, ship, and scale AI assistants, multi-agent workflows, and RAG copilots—securely
-            integrated with your stack. Every deployment is evaluation-driven, compliant, and observability-first.
+            Let’s Sprinkle AI crafts copilots, multi-agent automation, and analytics layers that delight your customers while
+            respecting enterprise guardrails. From ideation to launch, we pair Kolkata-based builders with global best
+            practices.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <Link href="#contact" className={buttonVariants("primary")}>
-              Book a discovery call
+              Schedule a strategy call
             </Link>
             <Link href="#demos" className={buttonVariants("ghost", "gap-1")}>See live AI demo</Link>
           </div>

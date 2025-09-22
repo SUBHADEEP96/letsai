@@ -8,7 +8,7 @@ export function Analytics() {
   return (
     <script
       defer
-      data-domain="letsai.dev"
+      data-domain="letsprinkleai.com"
       data-api="/analytics/event"
       src={`https://plausible.io/js/script.js?id=${id}`}
     />

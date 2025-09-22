@@ -1,6 +1,6 @@
-# LetsAI Studio Marketing Site
+# Let’s Sprinkle AI Marketing Site
 
-Modern marketing site for the LetsAI Studio agentic AI product team. Built with Next.js 15 App Router, React 19.1, Tailwind CSS v4, and Turbopack.
+Modern marketing site for Let’s Sprinkle AI, a customer experience AI studio based in Salt Lake City, Kolkata. Built with Next.js 15 App Router, React 19.1, Tailwind CSS v4, and Turbopack.
 
 ## Getting started
 

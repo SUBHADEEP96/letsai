@@ -4,63 +4,68 @@ import "@/styles/globals.css";
 import { Analytics } from "@/lib/analytics";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://letsai.dev"),
+  metadataBase: new URL("https://letsprinkleai.com"),
   title: {
-    default: "LetsAI Studio — Agentic AI, built for production",
-    template: "%s | LetsAI Studio",
+    default: "Let’s Sprinkle AI — Customer experience copilots & automation",
+    template: "%s | Let’s Sprinkle AI",
   },
   description:
-    "Full-stack agentic AI product studio delivering LangGraph orchestration, OpenAI Agents, RAG copilots, and scalable inference.",
+    "Let’s Sprinkle AI designs customer experience copilots, analytics, and automation agents from our studio in Salt Lake City, Kolkata.",
   openGraph: {
-    title: "LetsAI Studio",
+    title: "Let’s Sprinkle AI",
     description:
-      "We design, ship, and scale AI assistants, multi-agent workflows, and RAG copilots—securely integrated with your stack.",
-    url: "https://letsai.dev",
-    siteName: "LetsAI Studio",
+      "Sprinkling intelligence across sales, support, and marketing with bespoke copilots, trusted guardrails, and on-call experts in India.",
+    url: "https://letsprinkleai.com",
+    siteName: "Let’s Sprinkle AI",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LetsAI Studio",
+    title: "Let’s Sprinkle AI",
     description:
-      "Agentic AI development with LangGraph, CrewAI, MCP, and high-throughput inference.",
+      "AI strategy, design, and deployment for customer experience teams based in Kolkata, India.",
   },
   keywords: [
-    "Agentic AI",
-    "LangGraph",
-    "CrewAI",
-    "MCP",
-    "A2A",
-    "OpenAI Agents",
-    "RAG",
-    "LLMOps",
-    "vLLM",
-    "AWS Bedrock",
+    "Let’s Sprinkle AI",
+    "Customer experience AI",
+    "AI copilots",
+    "Automation agents",
+    "Kolkata AI studio",
+    "Indian AI company",
+    "LinkedIn Let’s Sprinkle AI",
+    "AI strategy",
+    "RAG copilots",
+    "AI automation",
   ],
 };
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "LetsAI Studio",
-  url: "https://letsai.dev",
-  sameAs: [
-    "https://www.linkedin.com/company/letsai-studio",
-    "https://github.com/letsai-studio",
-  ],
+  name: "Let’s Sprinkle AI",
+  url: "https://letsprinkleai.com",
+  sameAs: ["https://www.linkedin.com/company/let-sprinkle-ai/"],
   description:
-    "Agentic AI product studio delivering LangChain, LangGraph, CrewAI, MCP, and OpenAI Agents integrations.",
-  logo: "https://letsai.dev/og-image.png",
+    "Let’s Sprinkle AI is a Kolkata-based studio crafting customer experience copilots, conversational analytics, and automation agents.",
+  logo: "https://letsprinkleai.com/assets/brand/lets-sprinkle-ai-logo.svg",
   contactPoint: [
     {
       "@type": "ContactPoint",
       contactType: "sales",
-      email: "hello@letsai.dev",
-      areaServed: "Global",
+      email: "contact@letsprinkleai.com",
+      telephone: "+91-79803-14116",
+      areaServed: "IN",
       availableLanguage: ["English"],
     },
   ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Salt Lake City",
+    addressRegion: "West Bengal",
+    postalCode: "700091",
+    addressCountry: "IN",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
