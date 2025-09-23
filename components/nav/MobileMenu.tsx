@@ -60,7 +60,7 @@ export function MobileMenu({ items, open, onClose }: MobileMenuProps) {
           <Link
             key={item.href}
             href={item.href}
-            className="rounded-2xl border border-transparent px-4 py-3 hover:border-[color:rgba(110,231,255,0.25)] hover:bg-[color:rgba(255,255,255,0.04)]"
+            className="rounded-2xl border border-white/5 bg-white/5 px-4 py-3 transition-colors duration-200 hover:border-[color:rgba(110,231,255,0.35)] hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[color:rgba(5,7,11,0.9)] focus-visible:ring-[color:rgba(110,231,255,0.45)]"
             onClick={onClose}
           >
             {item.label}
