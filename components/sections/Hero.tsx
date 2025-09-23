@@ -20,27 +20,32 @@ export function Hero() {
       <Container className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         <FadeIn className="space-y-8">
           <Image
-            src="/assets/brand/lets-sprinkle-ai-logo.svg"
+            src="/assets/logo.png"
             alt="Let's Sprinkle AI logo"
             width={200}
             height={120}
             className="h-16 w-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.25)] sm:h-20"
             priority
           />
-          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--accent)]">Customer experience AI studio</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--accent)]">
+            Customer experience AI studio
+          </p>
           <h1 className="text-balance text-4xl font-semibold leading-tight sm:text-6xl">
             Sprinkle intelligence across every interaction.
           </h1>
           <p className="max-w-xl text-lg text-muted">
-            Let’s Sprinkle AI crafts copilots, multi-agent automation, and analytics layers that delight your customers while
-            respecting enterprise guardrails. From ideation to launch, we pair Kolkata-based builders with global best
-            practices.
+            Let’s Sprinkle AI crafts copilots, multi-agent automation, and
+            analytics layers that delight your customers while respecting
+            enterprise guardrails. From ideation to launch, we pair
+            Kolkata-based builders with global best practices.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <Link href="#contact" className={buttonVariants("primary")}>
               Schedule a strategy call
             </Link>
-            <Link href="#demos" className={buttonVariants("ghost", "gap-1")}>See live AI demo</Link>
+            <Link href="#demos" className={buttonVariants("ghost", "gap-1")}>
+              See live AI demo
+            </Link>
           </div>
           <ul className="grid gap-2 text-sm text-muted sm:grid-cols-2">
             <li>LangGraph orchestration with live streaming UIs.</li>
@@ -59,15 +64,18 @@ export function Hero() {
               <div className="space-y-5 text-sm text-muted">
                 <p className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[color:var(--accent)]" />
-                  LangChain / LangGraph flows with React <code>useStream</code> for token-perfect UX.
+                  LangChain / LangGraph flows with React <code>useStream</code>{" "}
+                  for token-perfect UX.
                 </p>
                 <p className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[color:var(--accent)]" />
-                  CrewAI, MCP, and Google A2A to harmonize agents across teams and data planes.
+                  CrewAI, MCP, and Google A2A to harmonize agents across teams
+                  and data planes.
                 </p>
                 <p className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[color:var(--accent)]" />
-                  Evaluations, guardrails, and cost dashboards ready for your LLMOps pipeline.
+                  Evaluations, guardrails, and cost dashboards ready for your
+                  LLMOps pipeline.
                 </p>
               </div>
               <Link
@@ -82,10 +90,15 @@ export function Hero() {
       </Container>
       <Container className="mt-16">
         <div className="overflow-hidden rounded-3xl border border-[color:rgba(110,231,255,0.15)] bg-[color:rgba(8,10,14,0.8)] p-4">
-          <p className="mb-4 text-xs uppercase tracking-[0.4em] text-muted">Trusted by teams shipping AI</p>
+          <p className="mb-4 text-xs uppercase tracking-[0.4em] text-muted">
+            Trusted by teams shipping AI
+          </p>
           <div className="flex snap-x items-center gap-8 overflow-x-auto pb-2 [scrollbar-width:none]">
             {logos.map((logo) => (
-              <div key={logo.alt} className="min-w-[140px] snap-start opacity-80 transition hover:opacity-100">
+              <div
+                key={logo.alt}
+                className="min-w-[140px] snap-start opacity-80 transition hover:opacity-100"
+              >
                 <Image
                   src={logo.src}
                   alt={logo.alt}

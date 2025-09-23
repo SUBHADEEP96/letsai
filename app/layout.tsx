@@ -48,7 +48,7 @@ const organizationSchema = {
   sameAs: ["https://www.linkedin.com/company/let-sprinkle-ai/"],
   description:
     "Let’s Sprinkle AI is a Kolkata-based studio crafting customer experience copilots, conversational analytics, and automation agents.",
-  logo: "https://letsprinkleai.com/assets/brand/lets-sprinkle-ai-logo.svg",
+  logo: "https://letsprinkleai.com/assets/logo.png",
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -75,7 +75,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script
           type="application/ld+json"
           suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
         {children}
         <Analytics />

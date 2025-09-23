@@ -22,7 +22,7 @@ export default function Home() {
         <Demos />
         <Process />
         <CaseStudies />
-        <Pricing />
+        {/* <Pricing /> */}
         <Contact />
       </main>
       <Footer />

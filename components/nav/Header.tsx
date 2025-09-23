@@ -15,7 +15,7 @@ const items = [
   { label: "Demos", href: "#demos" },
   { label: "Process", href: "#process" },
   { label: "Work", href: "#work" },
-  { label: "Pricing", href: "#pricing" },
+  // { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -48,7 +48,7 @@ export function Header() {
           aria-label="Let's Sprinkle AI home"
         >
           <Image
-            src="/assets/brand/lets-sprinkle-ai-logo.svg"
+            src="/assets/logo.png"
             alt="Let's Sprinkle AI logo"
             width={120}
             height={60}
@@ -69,7 +69,9 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden md:block">
-          <Link href="#contact" className={buttonVariants("secondary")}>Book a call</Link>
+          <Link href="#contact" className={buttonVariants("secondary")}>
+            Book a call
+          </Link>
         </div>
         <Button
           className="md:hidden"
@@ -80,7 +82,11 @@ export function Header() {
           <Menu className="h-5 w-5" />
         </Button>
       </Container>
-      <MobileMenu items={items} open={menuOpen} onClose={() => setMenuOpen(false)} />
+      <MobileMenu
+        items={items}
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+      />
     </header>
   );
 }
