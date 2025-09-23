@@ -59,15 +59,15 @@ export function Hero() {
               <div className="space-y-5 text-sm text-muted">
                 <p className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[color:var(--accent)]" />
-                  LangChain / LangGraph flows with React <code>useStream</code> for token-perfect UX.
+                  Smooth, real-time chat experiences powered by streaming interfaces.
                 </p>
                 <p className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[color:var(--accent)]" />
-                  CrewAI, MCP, and Google A2A to harmonize agents across teams and data planes.
+                  Coordinated AI helpers that share context across your tools.
                 </p>
                 <p className="flex items-start gap-3">
                   <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[color:var(--accent)]" />
-                  Evaluations, guardrails, and cost dashboards ready for your LLMOps pipeline.
+                  Built-in safeguards and cost transparency from day one.
                 </p>
               </div>
               <Link
