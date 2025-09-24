@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-
+import { X } from "lucide-react";
+import Image from "next/image";
 interface NavItem {
   label: string;
   href: string;
@@ -42,17 +43,32 @@ export function MobileMenu({ items, open, onClose }: MobileMenuProps) {
       className="fixed inset-0 z-40 flex flex-col bg-[color:rgba(5,7,11,0.9)] px-6 pb-12 pt-6 backdrop-blur-lg"
     >
       <div className="flex items-center justify-between">
-        <span className="text-sm font-semibold uppercase tracking-[0.4em] text-[color:var(--accent)]">
+        {/* <span className="text-sm font-semibold uppercase tracking-[0.4em] text-[color:var(--accent)]">
           Let’s Sprinkle AI
-        </span>
+        </span> */}
+        <Link
+          href="/"
+          className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.4em] text-[color:var(--accent)]"
+          aria-label="Let's Sprinkle AI home"
+        >
+          <Image
+            src="/assets/logo.png"
+            alt="Let's Sprinkle AI logo"
+            width={120}
+            height={60}
+            className="h-10 w-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.35)]"
+            priority
+          />
+          <span className="sr-only">Let’s Sprinkle AI</span>
+        </Link>
         <Button
           ref={closeRef}
           variant="ghost"
           onClick={onClose}
           aria-label="Close navigation menu"
-          className="px-3 py-2"
+          className="px-3 py-2 cursor-pointer"
         >
-          Close
+          <X className="h-5 w-5" />
         </Button>
       </div>
       <nav className="mt-12 flex flex-1 flex-col gap-6 text-lg font-medium">
