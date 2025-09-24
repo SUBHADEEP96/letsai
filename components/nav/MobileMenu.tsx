@@ -68,7 +68,7 @@ export function MobileMenu({ items, open, onClose }: MobileMenuProps) {
         ))}
       </nav>
       <p className="mt-6 text-sm text-muted">
-        Human-centered AI copilots · Enterprise guardrails · On-call support from Kolkata.
+        Human-centered AI copilots · Enterprise guardrails
       </p>
     </div>
   );

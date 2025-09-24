@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { Menu, FlaskConical, ArrowUpRight } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { MobileMenu } from "@/components/nav/MobileMenu";
@@ -69,8 +69,16 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden md:block">
-          <Link href="#contact" className={buttonVariants("secondary")}>
-            Book a call
+          <Link
+            href="https://www.letsprinkle.com"
+            target="_blank"
+            className={buttonVariants("secondary")}
+          >
+            <span className="flex items-center gap-2">
+              <FlaskConical />
+              <p>Let's AI Lab</p>
+              <ArrowUpRight />
+            </span>
           </Link>
         </div>
         <Button
