@@ -48,12 +48,6 @@ export function Hero() {
               See live AI demo
             </Link>
           </div>
-          <ul className="grid gap-2 text-sm text-muted sm:grid-cols-2">
-            <li>LangGraph orchestration with live streaming UIs.</li>
-            <li>OpenAI Agents SDK & Responses API for resilient tool-use.</li>
-            <li>Standards-first MCP & Google A2A interoperability.</li>
-            <li>High-throughput inference with vLLM and Bedrock.</li>
-          </ul>
         </FadeIn>
         <FadeIn delay={0.2} className="relative">
           <div className="relative overflow-hidden rounded-[32px] border border-[color:rgba(110,231,255,0.2)] bg-[color:rgba(13,15,20,0.9)] p-8 shadow-[0_40px_120px_rgba(0,0,0,0.45)]">

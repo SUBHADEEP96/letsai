@@ -10,6 +10,7 @@ import { Pricing } from "@/components/sections/Pricing";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 
+import { ChatButton } from "@/components/ui/ChatButton";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-[color:var(--bg)] text-[color:var(--fg)]">
@@ -26,6 +27,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ChatButton />
     </div>
   );
 }

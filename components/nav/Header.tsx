@@ -10,7 +10,7 @@ import { MobileMenu } from "@/components/nav/MobileMenu";
 
 const items = [
   { label: "Home", href: "#home" },
-  { label: "Build", href: "#build" },
+  { label: "AI solutions", href: "#solutions" },
   { label: "Tech", href: "#tech" },
   { label: "Demos", href: "#demos" },
   { label: "Process", href: "#process" },

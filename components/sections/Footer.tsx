@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
-
+import { Linkedin, Mail, PhoneCall } from "lucide-react";
 const footerLinks = [
   { label: "Home", href: "#home" },
   { label: "Build", href: "#build" },
@@ -15,10 +15,19 @@ const footerLinks = [
 const socialLinks = [
   {
     label: "LinkedIn",
+    icon: <Linkedin className="w-4 h-4 inline mr-2" />,
     href: "https://www.linkedin.com/company/let-sprinkle-ai/",
   },
-  { label: "Email", href: "mailto:contact@letsprinkleai.com" },
-  { label: "Call", href: "tel:+917980314116" },
+  {
+    label: "Email",
+    icon: <Mail className="w-4 h-4 inline mr-2" />,
+    href: "mailto:contact@letsprinkleai.com",
+  },
+  {
+    label: "Call",
+    icon: <PhoneCall className="w-4 h-4 inline mr-2" />,
+    href: "tel:+917980314116",
+  },
 ];
 
 export function Footer() {
@@ -35,9 +44,6 @@ export function Footer() {
             journeys.
           </p>
           {/* <p className="text-xs text-muted">Salt Lake City · Kolkata, India · +91 79803 14116</p> */}
-          <p className="text-xs text-muted">
-            © {new Date().getFullYear()} Let’s Sprinkle AI. All rights reserved.
-          </p>
         </div>
         <div className="flex flex-1 flex-col gap-6 md:flex-row md:justify-end">
           <nav className="flex flex-wrap gap-4 text-xs text-muted">
@@ -52,23 +58,29 @@ export function Footer() {
             ))}
           </nav>
           <nav className="flex gap-4 text-xs text-muted">
-            {socialLinks.map((link) => {
-              const isExternal = link.href.startsWith("http");
+            {socialLinks.map((item, idx) => {
+              const isExternal = item.href.startsWith("http");
               return (
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  key={item.href}
+                  href={item.href}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noreferrer" : undefined}
                   className="transition hover:text-[color:var(--accent)]"
                 >
-                  {link.label}
+                  {item.icon}
                 </Link>
               );
             })}
           </nav>
         </div>
       </Container>
+      <hr className="bg-white mt-4" />
+      <div className="pt-5 text-center">
+        <p className="text-xs text-muted">
+          © {new Date().getFullYear()} Let’s Sprinkle AI. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 }
